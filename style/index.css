@@ -7,6 +7,40 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Geist Mono';
+  src: url('./fonts/GeistMono-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geist Mono';
+  src: url('./fonts/GeistMono-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Geist Mono';
+  src: url('./fonts/GeistMono-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geist Mono';
+  src: url('./fonts/GeistMono-BoldItalic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Use Geist Mono and content font size in unrendered Markdown cells */
+.jp-MarkdownCell {
+  --jp-code-font-family: var(--jp-content-font-family);
+  --jp-code-font-size: var(--jp-content-font-size1);
+}
+
 /* Set the default typography for monospace elements */
 tt,
 code,
