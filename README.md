@@ -8,12 +8,34 @@ A simple JupyterLab theme
 
 - JupyterLab >= 4.0.0
 
-## Install
+## Install (Local Wheel)
 
-To install the extension, execute:
+Since this theme is not published to PyPI, you can build a standalone `.whl` file locally and install it into any Python environment (without needing Node.js in the target environment).
+
+### 1. Build the `.whl` file
+
+Activate the development environment for this repository and run:
 
 ```bash
-pip install jupyterlab_sample_theme
+pip install build
+jlpm build:prod
+python -m build --wheel
+```
+
+This generates the wheel inside `dist/` (e.g., `dist/jupyterlab_sample_theme-0.1.0-py3-none-any.whl`).
+
+### 2. Install into another environment
+
+Activate your target environment (e.g., `micromamba activate <env-name>`) and install the wheel:
+
+```bash
+pip install /path/to/jupyterlab-sample-theme/dist/jupyterlab_sample_theme-0.1.0-py3-none-any.whl
+```
+
+Or reference it in another project's `pyproject.toml` / `requirements.txt`:
+
+```text
+jupyterlab-sample-theme @ file:///path/to/jupyterlab-sample-theme/dist/jupyterlab_sample_theme-0.1.0-py3-none-any.whl
 ```
 
 ## Uninstall
