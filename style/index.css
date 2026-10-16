@@ -35,10 +35,28 @@
   font-style: italic;
 }
 
+@font-face {
+  font-family: 'Geist Pixel';
+  src: url('./fonts/GeistPixel-Square.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
 /* Use Geist Mono and content font size in unrendered Markdown cells */
 .jp-MarkdownCell {
   --jp-code-font-family: var(--jp-content-font-family);
   --jp-code-font-size: var(--jp-content-font-size1);
+}
+
+/* Use Geist Pixel for rendered Markdown headings and quotes */
+.jp-RenderedHTMLCommon h1,
+.jp-RenderedHTMLCommon h2,
+.jp-RenderedHTMLCommon h3,
+.jp-RenderedHTMLCommon h4,
+.jp-RenderedHTMLCommon h5,
+.jp-RenderedHTMLCommon h6,
+.jp-RenderedHTMLCommon blockquote {
+  font-family: 'Geist Pixel', var(--jp-content-font-family);
 }
 
 /* Set the default typography for monospace elements */
