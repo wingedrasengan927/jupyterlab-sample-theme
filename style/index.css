@@ -1,67 +1,5 @@
 @import url('./variables.css');
-
-@font-face {
-  font-family: 'JetBrains Mono';
-  src: url('./fonts/JetBrainsMono-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Geist Mono';
-  src: url('./fonts/GeistMono-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Geist Mono';
-  src: url('./fonts/GeistMono-Italic.woff2') format('woff2');
-  font-weight: 400;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Geist Mono';
-  src: url('./fonts/GeistMono-Bold.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Geist Mono';
-  src: url('./fonts/GeistMono-BoldItalic.woff2') format('woff2');
-  font-weight: 700;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Geist Pixel';
-  src: url('./fonts/GeistPixel-Square.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Geist Sans';
-  src: url('./fonts/Geist-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Geist Sans';
-  src: url('./fonts/Geist-Medium.woff2') format('woff2');
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Geist Sans';
-  src: url('./fonts/Geist-Bold.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-}
+@import url('./fonts.css');
 
 /* Use Geist Mono and content font size in unrendered Markdown cells */
 .jp-MarkdownCell {
@@ -78,6 +16,15 @@
 .jp-RenderedHTMLCommon h6,
 .jp-RenderedHTMLCommon blockquote {
   font-family: 'Geist Pixel', var(--jp-content-font-family);
+}
+
+/* Limit cell images to 70% width and align to the left */
+.jp-RenderedHTMLCommon img,
+.jp-RenderedImage img {
+  max-width: 70%;
+  height: auto;
+  margin-left: 0;
+  margin-right: auto;
 }
 
 /* Set the default typography for monospace elements */
